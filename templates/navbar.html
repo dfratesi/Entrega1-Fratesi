@@ -1,4 +1,5 @@
 {% url 'libreria:book-list' as books %}
+{% url 'index' as index %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Libreria</a>
   <button class="navbar-toggler"
@@ -12,8 +13,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item {% if request.path == index %}active{% endif %}">
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item {% if request.path == books %}active{% endif %}">
         <a class="nav-link" href="{% url 'libreria:book-list' %}">Libros</a>

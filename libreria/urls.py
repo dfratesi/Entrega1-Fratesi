@@ -5,5 +5,5 @@ from .views import lista_libros
 app_name = "libreria"
 
 urlpatterns = [
-    path('', lista_libros, name='book-list'),
+    path("libros/", lista_libros, name="book-list"),
 ]
