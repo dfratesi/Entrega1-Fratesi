@@ -24,3 +24,9 @@ def libro_create(request):
         form = LibroForm()
     context = {"form": form}
     return render(request, "libreria/libros_create.html", context=context)
+
+
+def book_detail(request, pk):
+    """ Detalle del libro"""
+    libro = get_object_or_404(Libro, pk=pk)
+    return render(request, "libreria/libro_detail.html", {"libro": libro})
