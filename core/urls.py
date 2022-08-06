@@ -20,5 +20,5 @@ from libreria.views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="index"),
-    path("", include("libreria.urls")),
+    path("libros/", include("libreria.urls")),
 ]

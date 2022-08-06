@@ -1,9 +1,10 @@
 from os import fsdecode
 from django.urls import path
-from .views import lista_libros
+from .views import lista_libros, libro_create
 
 app_name = "libreria"
 
 urlpatterns = [
-    path("libros/", lista_libros, name="book-list"),
+    path("", lista_libros, name="book-list"),
+    path("create/", libro_create, name="create"),
 ]
