@@ -1,4 +1,3 @@
-from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Libro, Autor, Genero
 from .forms import LibroForm
@@ -11,7 +10,7 @@ def home(request):
 def lista_libros(request):
     libros = Libro.objects.all()
     context = {"libros": libros}
-    return render(request, "libreria/libros_list.html", context=context)
+    return render(request, "libreria/libro_list.html", context=context)
 
 
 def libro_create(request):
@@ -23,7 +22,7 @@ def libro_create(request):
     else:
         form = LibroForm()
     context = {"form": form}
-    return render(request, "libreria/libros_create.html", context=context)
+    return render(request, "libreria/libro_create.html", context=context)
 
 
 def book_detail(request, pk):
