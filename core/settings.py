@@ -39,7 +39,9 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    "crispy_forms",
+]
 
 LOCAL_APPS = [
     "libreria",
@@ -129,3 +131,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Template para crispy_forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
