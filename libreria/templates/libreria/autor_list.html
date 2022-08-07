@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    {% for autor in autores %}
+    <a href="{% url 'libreria:autor-detail' pk=autor.pk %}">{{ autor.fullname }}</a>
+    {% endfor %}
+{% endblock content %}

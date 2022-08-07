@@ -35,8 +35,11 @@ class Autor(models.Model):
         ordering = ["last_name", "name"]
         verbose_name_plural = "Autores"
 
-    def __str__(self):
+    def fullname(self):
         return f"{self.last_name} {self.name}"
+
+    def __str__(self):
+        return self.fullname()
 
 
 class Genero(models.Model):
