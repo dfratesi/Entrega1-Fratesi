@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}
+    Lista de Libros
+{% endblock title %}
 {% block content %}
     {% for libro in libros %}
-    <a href="{% url 'libreria:book-detail' pk=libro.pk %}">{{ libro.title }}</a>
+        <a href="{% url 'libreria:book-detail' pk=libro.pk %}">{{ libro.title }}</a>
     {% endfor %}
 {% endblock content %}
