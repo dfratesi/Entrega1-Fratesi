@@ -1,5 +1,5 @@
 from django import forms
-from .models import Libro, Autor
+from .models import Libro, Autor, Genero
 
 
 class LibroForm(forms.ModelForm):
@@ -15,4 +15,12 @@ class AutorForm(forms.ModelForm):
 
     class Meta:
         model = Autor
+        fields = "__all__"
+
+
+class GeneroForm(forms.ModelForm):
+    """Form para agregar y editar autores"""
+
+    class Meta:
+        model = Genero
         fields = "__all__"

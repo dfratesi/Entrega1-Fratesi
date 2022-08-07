@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Libro, Autor, Genero
-from .forms import LibroForm, AutorForm
+from .forms import LibroForm, AutorForm, GeneroForm
 
 
 def home(request):
@@ -53,3 +53,27 @@ def autor_detail(request, pk):
     """Detalle del Autor"""
     autor = get_object_or_404(Autor, pk=pk)
     return render(request, "libreria/autor_detail.html", {"autor": autor})
+
+
+def lista_generos(request):
+    generos = Genero.objects.all()
+    context = {"generos": generos}
+    return render(request, "libreria/genero_list.html", context=context)
+
+
+def genero_create(request):
+    if request.method == "POST":
+        form = GeneroForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+    else:
+        form = GeneroForm()
+    context = {"form": form}
+    return render(request, "libreria/genero_create.html", context=context)
+
+
+def genero_detail(request, pk):
+    """Detalle del Autor"""
+    genero = get_object_or_404(Genero, pk=pk)
+    return render(request, "libreria/genero_detail.html", {"genero": genero})

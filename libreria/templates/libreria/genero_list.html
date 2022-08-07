@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}
+    Géneros
+{% endblock title %}
+{% block content %}
+    {% for genero in generos %}
+        <a href="{% url 'libreria:genero-detail' pk=genero.pk %}">{{ genero.name }}</a>
+    {% endfor %}
+{% endblock content %}

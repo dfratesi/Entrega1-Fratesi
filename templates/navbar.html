@@ -1,6 +1,7 @@
 {% url 'index' as index %}
 {% url 'libreria:book-list' as books %}
 {% url 'libreria:autores-list' as autores %}
+{% url 'libreria:generos-list' as generos %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="{% url 'index' %}">Libreria</a>
   <button class="navbar-toggler"
@@ -26,8 +27,11 @@
           {% if request.path == books %}<span class="sr-only">(current)</span>{% endif %}
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Géneros</a>
+      <li class="nav-item {% if request.path == generos %}active{% endif %}">
+        <a class="nav-link" href="{% url 'libreria:generos-list' %}">
+          Géneros
+          {% if request.path == generos %}<span class="sr-only">(current)</span>{% endif %}
+        </a>
       </li>
     </ul>
   </div>
