@@ -17,7 +17,7 @@ class Libro(models.Model):
         null=True,
         blank=True,
     )
-    resumen = models.TextField("Resumen", max_length=1000, null=True, blank=True)
+    resumen = models.TextField("Reseña", max_length=1000, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -29,7 +29,9 @@ class Libro(models.Model):
 class Autor(models.Model):
     name = models.CharField("Nombre", max_length=20, null=True, blank=True)
     last_name = models.CharField("Apellido", max_length=50)
-    nacionalidad = models.CharField("Nacionalidad", max_length=50, null=True, blank=True)
+    nacionalidad = models.CharField(
+        "Nacionalidad", max_length=50, null=True, blank=True, help_text="País de origen"
+    )
 
     class Meta:
         ordering = ["last_name", "name"]
@@ -51,7 +53,6 @@ class Genero(models.Model):
 
     def __str__(self):
         return self.name
-    
 
 
 class Idioma(models.Model):
