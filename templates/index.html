@@ -3,5 +3,32 @@
     Libreria online
 {% endblock title %}
 {% block content %}
-    Hola desde el index
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Libreria Online</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id bibendum sapien. In hac habitasse platea dictumst. Nam quis eleifend est, id dapibus nisl. Proin
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg"
+                   href="{% url 'libreria:book-list' %}"
+                   role="button">Libros &#187</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>
+                    Últimos <span class="text-danger"">ingresos</span>
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% for libro in libros %}<p>{{ libro.title }}</p>{% endfor %}
+            </div>
+        </div>
+    </div>
+    <!--/container-->
 {% endblock content %}
