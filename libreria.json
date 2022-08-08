@@ -1,0 +1,154 @@
+[
+{
+  "model": "libreria.libro",
+  "pk": 1,
+  "fields": {
+    "title": "El Aleph",
+    "editorial": "Debolsillo",
+    "isbn": "9789875666481",
+    "price": 2599.0,
+    "idioma": 1,
+    "autor": 1,
+    "resumen": "La mayoría de los cuentos reunidos en este libro pertenecen al género fantástico. Algunos surgieron a partir de crónicas policiales, de pinturas o simplemente de la visión de algún conventillo; otro explora el efecto que la inmortalidad causaría en los hombres; hay una glosa al Martín Fierro, sueños sobre la identidad personal y fantasías del tiempo.\r\nEl cuento 'El Aleph', publicado por primera vez en 1 945, aborda uno de los temas recurrentes en la literatura de Borges: el infinito. Porque en esa esfera resplandeciente confluyen de un modo asombroso todos los tiempos y todos los espacios.",
+    "genero": [
+      1
+    ]
+  }
+},
+{
+  "model": "libreria.libro",
+  "pk": 2,
+  "fields": {
+    "title": "El Hechizo Del Agua",
+    "editorial": "Planeta",
+    "isbn": "9789504975847",
+    "price": 3270.0,
+    "idioma": 1,
+    "autor": 2,
+    "resumen": "Brenda Gomez tiene una vida perfecta. Es una alumna destacada en la carrera de Ciencias Económicas, su novio es un joven ambicioso y con un gran futuro, sus amigas son leales, su familia la adora. Pero ella no es feliz. La domina un mundo interior complejo, plagado de sentimientos e ideas que oculta, porque la avergüenzan y la alejan del modelo que se impone seguir. De los secretos que esconde, uno la atormenta especialmente: ama a Diego Bertoni desde que tiene memoria; un amor extraño por varias razones, pero sobre todo un amor prohibido. ¿Quién soy yo en realidad? es la pregunta que Brenda jamás se formuló, y es, sin embargo, la que posee la llave para resolver los misterios que la definen, para acabar con la hipocresía que la condena a la infelicidad. ¿Reunirá el coraje para mirar en su interior y amar lo que realmente es? ¿Reunirá el valor para aceptar su amor por Diego y luchar por él?",
+    "genero": [
+      2
+    ]
+  }
+},
+{
+  "model": "libreria.libro",
+  "pk": 3,
+  "fields": {
+    "title": "Santa Evita",
+    "editorial": "Alfaguara",
+    "isbn": "9789877387148",
+    "price": 4749.0,
+    "idioma": 1,
+    "autor": 3,
+    "resumen": "",
+    "genero": [
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "libreria.libro",
+  "pk": 4,
+  "fields": {
+    "title": "Quiero Verte Otra Vez",
+    "editorial": "Planeta",
+    "isbn": "9789504976356",
+    "price": 2500.0,
+    "idioma": 1,
+    "autor": 4,
+    "resumen": "Roberto Fontanarrosa se hace personaje de sí mismo y, como eximio periodista deportivo, comanda un grupo de delirantes para seguir los pasos de la selección nacional de futbol. La pluma del rosarino da cuenta de los estiletazos filosóficos del pensador y dermatólogo Juan Jose Serenelli (Jota Jota, el Yaya); las destemplanzas de un fotógrafo de lo que nunca ocurre, y los vaticinios y enamoramientos de de la pitonisa Hermana Rosa junto al andar del team albiceleste: triunfos apoteóticos, empates con sabor a poco y derrotas siempre fraudulentas. El eterno moño del atento Zavatarelli, los pronosticos de la Base Marambio del 'Gordo' Muñoz y hasta el vuelo poético de Vitor Hugo empalidecen ante el análisis del gran maestro de los entresijos del balompie.",
+    "genero": [
+      3,
+      6
+    ]
+  }
+},
+{
+  "model": "libreria.autor",
+  "pk": 1,
+  "fields": {
+    "name": "Jorge Luis",
+    "last_name": "Borges",
+    "nacionalidad": "Argentina"
+  }
+},
+{
+  "model": "libreria.autor",
+  "pk": 2,
+  "fields": {
+    "name": "Florencia",
+    "last_name": "Bonelli",
+    "nacionalidad": "Argentina"
+  }
+},
+{
+  "model": "libreria.autor",
+  "pk": 3,
+  "fields": {
+    "name": "Tomás Eloy",
+    "last_name": "Martinez",
+    "nacionalidad": "Argentina"
+  }
+},
+{
+  "model": "libreria.autor",
+  "pk": 4,
+  "fields": {
+    "name": "Roberto",
+    "last_name": "Fontanarrosa",
+    "nacionalidad": "Argentina"
+  }
+},
+{
+  "model": "libreria.genero",
+  "pk": 1,
+  "fields": {
+    "name": "Literatura fantástica"
+  }
+},
+{
+  "model": "libreria.genero",
+  "pk": 2,
+  "fields": {
+    "name": "Narrativa romántica"
+  }
+},
+{
+  "model": "libreria.genero",
+  "pk": 3,
+  "fields": {
+    "name": "Ficción"
+  }
+},
+{
+  "model": "libreria.genero",
+  "pk": 4,
+  "fields": {
+    "name": "Narrativa"
+  }
+},
+{
+  "model": "libreria.genero",
+  "pk": 5,
+  "fields": {
+    "name": "Histórica"
+  }
+},
+{
+  "model": "libreria.genero",
+  "pk": 6,
+  "fields": {
+    "name": "Humor"
+  }
+},
+{
+  "model": "libreria.idioma",
+  "pk": 1,
+  "fields": {
+    "idioma": "Castellano"
+  }
+}
+]
