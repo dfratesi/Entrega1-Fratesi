@@ -54,10 +54,10 @@
 | libros/ | Listado de los libros |
 | libros/create/ | Formulario para cargar libros |
 | libros/_int_/ | Ver detalle de un libro. Se reemplaza _int_ con el _id_ del libro. |
-| autores/ | Listado de los autores |
-| autores/create/ | Formulario para cargar autores |
-| autores/_int_/ | Ver detalle de un autor. Se reemplaza _int_ con el _id_ del autor. |
-| generos/ | Listado de los géneros literarios |
-| generos/create/ | Formulario para cargar géneros |
-| generos/_int_/ | Ver detalle de un género literario. Se reemplaza _int_ con el _id_ del género. |
-| idiomas/create/ | Formulario para cargar idiomas |
+| libros/autores/ | Listado de los autores |
+| libros/autores/create/ | Formulario para cargar autores |
+| libros/autores/_int_/ | Ver detalle de un autor. Se reemplaza _int_ con el _id_ del autor. |
+| libros/generos/ | Listado de los géneros literarios |
+| libros/generos/create/ | Formulario para cargar géneros |
+| libros/generos/_int_/ | Ver detalle de un género literario. Se reemplaza _int_ con el _id_ del género. |
+| libros/idiomas/create/ | Formulario para cargar idiomas |
