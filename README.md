@@ -46,6 +46,10 @@
     ./manage.py runserver
     ```
 
+## Formulario de busqueda
+
+El formulario esta incluido en la nabvar. Se pueden buscar libros por título, apellido del autor y género literario.
+
 ## URLs
 
 | URL | Descripción |
