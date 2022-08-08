@@ -16,7 +16,7 @@
 
 ## Equipo
 
-@dfratesi :man_shrugging:
+@dfratesi Damián Fratesi :man_shrugging:
 
 ## Instalación en Linux
 
