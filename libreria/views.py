@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Libro, Autor, Genero
 from .forms import LibroForm, AutorForm, GeneroForm
+from django.db.models import Q
 
 
 def home(request):
@@ -77,3 +78,14 @@ def genero_detail(request, pk):
     """Detalle del Autor"""
     genero = get_object_or_404(Genero, pk=pk)
     return render(request, "libreria/genero_detail.html", {"genero": genero})
+
+
+def search_books(request):
+    search = request.GET["search"]
+    libros = Libro.objects.filter(
+        Q(title__icontains=search)
+        | Q(autor__last_name__icontains=search)
+        | Q(genero__name__icontains=search)
+    )
+    context = {"libros": libros}
+    return render(request, "libreria/book_search.html", context=context)
