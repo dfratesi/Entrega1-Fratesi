@@ -10,9 +10,9 @@
 
 - [x] Herencia de HTML
 - [x] Por lo menos 3 clases en modelos
-- [ ] Un formulario para insertar datos a todas las clases de los modelos
+- [x] Un formulario para insertar datos a todas las clases de los modelos
 - [x] Un formulario para buscar algo en la BD
-- [ ] Readme que indique el orden en el que se prueban las cosas y/o donde están las funcionalidades.
+- [x] Readme que indique el orden en el que se prueban las cosas y/o donde están las funcionalidades.
 
 ## Equipo
 
