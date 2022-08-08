@@ -10,6 +10,7 @@ from .views import (
     genero_create,
     genero_detail,
     search_books,
+    idioma_create,
 )
 
 app_name = "libreria"
@@ -25,4 +26,5 @@ urlpatterns = [
     path("generos/", lista_generos, name="generos-list"),
     path("generos/create/", genero_create, name="genero-create"),
     path("generos/<int:pk>/", genero_detail, name="genero-detail"),
+    path("idiomas/create/", idioma_create, name="idiomas-create"),
 ]

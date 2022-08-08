@@ -1,5 +1,5 @@
 from django import forms
-from .models import Libro, Autor, Genero
+from .models import Libro, Autor, Genero, Idioma
 
 
 class LibroForm(forms.ModelForm):
@@ -19,8 +19,16 @@ class AutorForm(forms.ModelForm):
 
 
 class GeneroForm(forms.ModelForm):
-    """Form para agregar y editar autores"""
+    """Form para agregar y editar generos literarios"""
 
     class Meta:
         model = Genero
+        fields = "__all__"
+
+
+class IdiomaForm(forms.ModelForm):
+    """Form para agregar y editar idiomas"""
+
+    class Meta:
+        model = Idioma
         fields = "__all__"
