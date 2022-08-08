@@ -20,13 +20,13 @@
 
 ## Instalación en Linux
 
-1. Crear environment
+1. Crear entorno
 
     ```python
     python3 -m venv env
     ```
 
-2. Activar environment
+2. Activar entorno
 
     ```pyton
     source env/bin/activate
