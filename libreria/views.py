@@ -5,7 +5,9 @@ from django.db.models import Q
 
 
 def home(request):
-    return render(request, "index.html")
+    libros = Libro.objects.all().order_by('-id')[:3]
+    context = {'libros': libros}
+    return render(request, "index.html", context=context)
 
 
 def lista_libros(request):

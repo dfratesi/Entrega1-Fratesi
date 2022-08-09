@@ -61,9 +61,9 @@ El formulario esta incluido en la nabvar. Se pueden buscar libros por título, a
 | libros/create/ | Formulario para cargar libros |
 | libros/_int_/ | Ver detalle de un libro. Se reemplaza _int_ con el _id_ del libro. |
 | libros/autores/ | Listado de los autores |
-| libros/autores/create/ | Formulario para cargar autores |
+| libros/autores/create/ | Formulario para ingresar autores |
 | libros/autores/_int_/ | Ver detalle de un autor. Se reemplaza _int_ con el _id_ del autor. |
 | libros/generos/ | Listado de los géneros literarios |
-| libros/generos/create/ | Formulario para cargar géneros |
+| libros/generos/create/ | Formulario para ingresar géneros |
 | libros/generos/_int_/ | Ver detalle de un género literario. Se reemplaza _int_ con el _id_ del género. |
-| libros/idiomas/create/ | Formulario para cargar idiomas |
+| libros/idiomas/create/ | Formulario para ingresar idiomas |

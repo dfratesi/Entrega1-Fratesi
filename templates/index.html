@@ -3,5 +3,44 @@
     Libreria online
 {% endblock title %}
 {% block content %}
-    Hola desde el index
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Libreria Online</h1>
+            <p>{% lorem 25 w random %}.</p>
+            <p>
+                <a class="btn btn-primary btn-lg"
+                   href="{% url 'libreria:book-list' %}"
+                   role="button">Libros &#187</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>
+                    Últimos <span class="text-danger">ingresos</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for libro in libros %}
+                <div class="col-md-4">
+                    <h3>{{ libro.title|title }}</h3>
+                    <h5>{{ libro.autor }}</h5>
+                    <p>
+                        {% if libro.resumen %}
+                        {{ libro.resumen|truncatewords:20 }}
+                        {% else %}
+                        {% lorem 20 w random %}
+                        {% endif %}
+
+                    </p>
+                    <p>
+                        <a class="btn btn-secondary" href="{% url 'libreria:book-detail' pk=libro.pk %}" role="button">Ver detalles &#187</a>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--/container-->
 {% endblock content %}
