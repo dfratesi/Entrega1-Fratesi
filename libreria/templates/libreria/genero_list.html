@@ -3,7 +3,9 @@
     Géneros
 {% endblock title %}
 {% block content %}
-    {% for genero in generos %}
-        <a href="{% url 'libreria:genero-detail' pk=genero.pk %}">{{ genero.name }}</a>
-    {% endfor %}
+    <div class="container">
+        {% for genero in generos %}
+            <a href="{% url 'libreria:genero-detail' pk=genero.pk %}">{{ genero.name }}</a>
+        {% endfor %}
+    </div>
 {% endblock content %}
