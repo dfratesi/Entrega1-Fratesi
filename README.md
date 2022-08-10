@@ -50,7 +50,7 @@
 
 ## Formulario de busqueda
 
-El formulario esta incluido en la nabvar. Se pueden buscar libros por título, apellido del autor y género literario.
+El formulario esta incluido en la navbar. Se pueden buscar libros por título, apellido del autor y género literario.
 
 ## URLs
 
