@@ -29,14 +29,15 @@
                     <h5>{{ libro.autor }}</h5>
                     <p>
                         {% if libro.resumen %}
-                        {{ libro.resumen|truncatewords:20 }}
+                            {{ libro.resumen|truncatewords:30 }}
                         {% else %}
-                        {% lorem 20 w random %}
+                            {% lorem 30 w random %}.
                         {% endif %}
-
                     </p>
                     <p>
-                        <a class="btn btn-secondary" href="{% url 'libreria:book-detail' pk=libro.pk %}" role="button">Ver detalles &#187</a>
+                        <a class="btn btn-secondary"
+                           href="{% url 'libreria:book-detail' pk=libro.pk %}"
+                           role="button">Ver detalles &#187</a>
                     </p>
                 </div>
             {% endfor %}

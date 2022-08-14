@@ -33,9 +33,19 @@
           {% if request.path == generos %}<span class="sr-only">(current)</span>{% endif %}
         </a>
       </li>
+      <li class="nav-item">
+        {% if user.is_authenticated %}
+          <p class="nav-link">Hi {{ user.email }}!</p>
+        {% else %}
+          <p>You are not logged in</p>
+          <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
+      </li>
     </ul>
   </div>
-  <form class="form-inline" action="{% url 'libreria:search-book' %}" method="get">
+  <form class="form-inline"
+        action="{% url 'libreria:search-book' %}"
+        method="get">
     <input class="form-control mr-sm-2"
            type="search"
            name="search"

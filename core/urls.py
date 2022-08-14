@@ -18,7 +18,11 @@ from django.urls import path, include
 from libreria.views import home
 
 urlpatterns = [
+    # Django admin
     path("admin/", admin.site.urls),
+    # Usuarios
+    path("accounts/", include("django.contrib.auth.urls")),
+    # Apps locales
     path("", home, name="index"),
     path("libros/", include("libreria.urls")),
 ]

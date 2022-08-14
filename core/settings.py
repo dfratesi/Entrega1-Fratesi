@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    "accounts.apps.AccountsConfig",
     "libreria",
 ]
 
@@ -134,3 +135,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Template para crispy_forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+LOGIN_REDIRECT_URL = "index"
