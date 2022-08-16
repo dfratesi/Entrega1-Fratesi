@@ -30,7 +30,7 @@
 
 2. Activar entorno
 
-    ```pyton
+    ```python
     source env/bin/activate
     ```
 
