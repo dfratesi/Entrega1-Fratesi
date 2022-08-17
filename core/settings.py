@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    "users",
     "libreria",
 ]
 
