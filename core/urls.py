@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from libreria.views import home
+from libreria.views import home, AboutView
 
 urlpatterns = [
     # Django admin
@@ -26,4 +26,5 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("", home, name="index"),
     path("libros/", include("libreria.urls")),
+    path("about/", AboutView.as_view(), name="about"),
 ]

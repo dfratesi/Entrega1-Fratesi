@@ -2,11 +2,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Libro, Autor, Genero
 from .forms import LibroForm, AutorForm, GeneroForm, IdiomaForm
 from django.db.models import Q
+from django.views.generic import TemplateView
 
 
 def home(request):
-    libros = Libro.objects.all().order_by('-id')[:3]
-    context = {'libros': libros}
+    libros = Libro.objects.all().order_by("-id")[:3]
+    context = {"libros": libros}
     return render(request, "index.html", context=context)
 
 
@@ -92,6 +93,7 @@ def search_books(request):
     context = {"libros": libros}
     return render(request, "libreria/book_search.html", context=context)
 
+
 def idioma_create(request):
     if request.method == "POST":
         form = IdiomaForm(request.POST)
@@ -102,3 +104,7 @@ def idioma_create(request):
         form = IdiomaForm()
     context = {"form": form}
     return render(request, "libreria/idioma_create.html", context=context)
+
+
+class AboutView(TemplateView):
+    template_name = "about.html"
