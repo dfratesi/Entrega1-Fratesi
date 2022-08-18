@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import ListView, DetailView
 from .models import Libro, Autor, Genero
 from .forms import LibroForm, AutorForm, GeneroForm, IdiomaForm
 from django.db.models import Q
@@ -9,6 +10,12 @@ def home(request):
     libros = Libro.objects.all().order_by("-id")[:3]
     context = {"libros": libros}
     return render(request, "index.html", context=context)
+
+
+class BookListView(ListView):
+    model = Libro
+    context_object_name = "libros"
+    template_name = "libreria/libro_list.html"
 
 
 def lista_libros(request):
@@ -29,10 +36,16 @@ def libro_create(request):
     return render(request, "libreria/libro_create.html", context=context)
 
 
-def book_detail(request, pk):
-    """Detalle del libro"""
-    libro = get_object_or_404(Libro, pk=pk)
-    return render(request, "libreria/libro_detail.html", {"libro": libro})
+# def book_detail(request, pk):
+#    """Detalle del libro"""
+#    libro = get_object_or_404(Libro, pk=pk)
+#    return render(request, "libreria/libro_detail.html", {"libro": libro})
+
+
+class BookDetailView(DetailView):
+    model = Libro
+    context_object_name = "libro"
+    template_name = "libreria/libro_detail.html"
 
 
 def lista_autores(request):
