@@ -23,6 +23,7 @@ urlpatterns = [
     # Usuarios
     path("accounts/", include("django.contrib.auth.urls")),
     # Apps locales
+    path("accounts/", include("accounts.urls")),
     path("", home, name="index"),
     path("libros/", include("libreria.urls")),
 ]
